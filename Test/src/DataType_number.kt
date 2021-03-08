@@ -17,4 +17,4 @@ fun main(args : Array<String>) {
     // ** as로 형변환은 기본형에서는 안 된다. **
     doubleValue = intValue.toDouble()
     intValue = doubleValue.toInt()
-}
+} 
