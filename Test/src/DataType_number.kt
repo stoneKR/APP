@@ -17,4 +17,6 @@ fun main(args : Array<String>) {
     // ** as로 형변환은 기본형에서는 안 된다. **
     doubleValue = intValue.toDouble()
     intValue = doubleValue.toInt()
-} 
+}
+// 소수점 처리는 더블형을 사용하는 것이 좋다!
+// 대부분의 숫자값은 웬만하면 int에서 처리 가능하다.

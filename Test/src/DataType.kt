@@ -21,4 +21,4 @@ fun main(args : Array<String>){
     // 함수 호출이나 수식처리도 가능함.
     var sTest3 = "sName의 값을 가져오는 것: ${sName + "움하하하하" + Date()}" // Java class도 가져올 수 있음.
     println(sTest3)
-} 
+}
