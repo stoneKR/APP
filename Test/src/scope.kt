@@ -17,4 +17,14 @@ fun main(args : Array<String>){
     }
     // 모르는 변수라 에러발생.
     // printLn(lNmae) 이 줄의 주석을 제거하면 지역변수와 전역변수를 이해할 수 있음
+
+fun main(args: Array<String>){
+    // 먼저 선언되어 있어야 이해할 수 있다.
+    // println(message)
+    val message = "위에서는 액세스 불가함"
+    // 어떻게 변수를 이해했을까?
+    println(message)
+}
+    
+val hiMessage : String = "Hi"
 }
