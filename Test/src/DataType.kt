@@ -1,4 +1,4 @@
-import java.util.*
+import java.util.* 
 fun main(args : Array<String>){
     var sName = "문자열 테스트 입니다."
     // 11. 문자열을 추가하는 것은 + 연산자로 가능함 <- Java와 동일
