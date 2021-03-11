@@ -1,4 +1,4 @@
-fun main(args : Array<String>){
+fun main(args : Array<String>){ 
     // fun 함수명(변수명 : 데이터 크기, ...) : 리턴값 { return; }
     // 의 형태로 되어있다.
     funByNoParam()
