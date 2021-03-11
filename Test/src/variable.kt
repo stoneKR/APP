@@ -1,4 +1,4 @@
-fun main(args : Array<String>){
+fun main(args : Array<String>){ 
     // 변수를 정의하는 벙법은 2가지
     // "var, var" 구분해야 함.
     varTest() // R/W 가능변수
