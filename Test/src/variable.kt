@@ -11,7 +11,7 @@ fun varTest() {
     num = 1
     // 2. 변수의 타입을 정하지 않음
     // 아래는 초기화 반드시 해야함
-    // var number; <-- 에러임
+    // var number; <-- 에러임 
     var number = 2
     // 아래도 에러발생
     // number = "";
