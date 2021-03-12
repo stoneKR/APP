@@ -1,4 +1,4 @@
-fun main(args : Array<String>) { 
+fun main(args : Array<String>) {  
     // 숫자형 DataType 크기 순으로 선언
     // 정확한 크기를 알 필요는 거의 없음.
     // 대부분 웬만한 수는 int로 해결되니까..
