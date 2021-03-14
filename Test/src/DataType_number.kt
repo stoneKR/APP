@@ -3,7 +3,7 @@ fun main(args : Array<String>) {
     // 정확한 크기를 알 필요는 거의 없음.
     // 대부분 웬만한 수는 int로 해결되니까..
     var doubleValue : Double = 10.1111
-    var floatValue  : Float  = 10.1f
+    var floatValue  : Float  = 10.1f 
     var longValue   : Long   = 10
     var intValue    : Int    = 10
     var shortValue  : Short  = 10
