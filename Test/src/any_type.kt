@@ -12,4 +12,4 @@ fun main(args : Array <String>){
             println("float입니다")
         }
     }
-} 
+}  
