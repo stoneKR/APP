@@ -4,7 +4,7 @@ fun main(args : Array <String>){
     var anything : Any
     anything = 1
     anything = "문자열"
-    anything = 111.01010
+    anything = 111.01010 
     anything = 10.00f
     //is와 !(not) 연산자로 어떤 데이터형인지 체크가 가능함.
     if(anything !is String){
