@@ -9,7 +9,7 @@ fun main(args : Array <String>){
     //is와 !(not) 연산자로 어떤 데이터형인지 체크가 가능함.
     if(anything !is String){
         if (anything is Float){
-            println("float입니다")
+            println("float입니다") 
         }
     }
 }  
