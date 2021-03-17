@@ -33,5 +33,13 @@ fun no_checked_exception() {
 //          System.exit(1)
 //      }
 //
-    // 
+    // kotlin은 try .. catch문을 반드실 할 필요가 없다. checked exception을 지원 안 함!!
+    val 'in' = BufferedReader(FileReader("file경로명"))
+    var s: String?
+    s = 'in'.readLine()
+    while (s != null) {
+        println(s)
+        s = 'in'.readLine()
+    }
+    'in'.close()
 }
