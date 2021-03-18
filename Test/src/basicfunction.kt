@@ -1,9 +1,9 @@
-fun main(args : Array<String>){  
+fun main(args : Array<String>){
     // fun 함수명(변수명 : 데이터 크기, ...) : 리턴값 { return; }
     // 의 형태로 되어있다.
     funByNoParam()
     funByParameter(3, "숫자입니다")
-    println (funByReturn("3을 넘기니")) 
+    println (funByReturn("3을 넘기니"))
     println(funByInline(3,10))
     funcVariable("함수형 변수 1")
     println( funVarByType("함수형 변수 2"))

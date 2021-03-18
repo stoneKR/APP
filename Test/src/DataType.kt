@@ -1,9 +1,9 @@
- import java.util.* 
+import java.util.*
 fun main(args : Array<String>){
     var sName = "문자열 테스트 입니다."
     // 11. 문자열을 추가하는 것은 + 연산자로 가능함 <- Java와 동일
     println (sName + " : 문자열 붙이기")
-    // 2. """이 안에 줄넘김 문자열이 들어갈 수 있다. """ 
+    // 2. """이 안에 줄넘김 문자열이 들어갈 수 있다. """
     // Python에 이런 기능이 있다.
     var sTest = """
         어떻게 출력될지..

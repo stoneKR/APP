@@ -11,7 +11,7 @@ fun caseExample(){
         "aaaa"        -> {println ("문자:" + obj )}
         is Float      -> {println ("숫자:" +  obj)}
         in (0 .. 9)   -> {println ("0~10까지 숫자")}
-        else          -> {println ("???")} 
+        else          -> {println ("???")}
     }
 }
 fun loopExample() {
