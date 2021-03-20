@@ -7,7 +7,7 @@ fun main(args : Array<String>){
     println(funByInline(3,10))
     funcVariable("함수형 변수 1")
     println( funVarByType("함수형 변수 2"))
-}
+} 
 fun funByReturn(s: String): Any? {
     return s + "-를 입력 받았습니다."
 }
