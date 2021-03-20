@@ -2,7 +2,7 @@ fun main(args : Array<String>){
     var l : LateInitTest = LateInitTest()
     l.Test()
     var l2 : LazyInitTest = LazyInitTest()
-    l2.Test()
+    l2.Test() 
 }
 // 코틀린에서는 java와 달리 멤버필드를 반드시 초기화해야 한다.
 // 아니면 abstract나 lateinit으로 선언해주어야 한다.
