@@ -12,3 +12,4 @@ public class JavaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_java);
     }
 } 
+ 
