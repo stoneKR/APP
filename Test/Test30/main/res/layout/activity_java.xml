@@ -5,5 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".JavaActivity">
- 
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="텍스트"
+        android:layout_margin="50dp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
