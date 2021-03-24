@@ -19,18 +19,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Click(btn_1)
+
     }
 
-    fun Click(v : View){
-        iv_1.visibility = View.INVISIBLE
-        iv_2.visibility = View.INVISIBLE
-        iv_3.visibility = View.INVISIBLE
 
-        when(v){
-            btn_1 -> iv_1.visibility = View.VISIBLE
-            btn_2 -> iv_2.visibility = View.VISIBLE
-            btn_3 -> iv_3.visibility = View.VISIBLE
-        }
-    }
 }
