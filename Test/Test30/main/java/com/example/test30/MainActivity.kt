@@ -11,18 +11,26 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
 
+    var DataList = arrayListOf(
+        Data(R.drawable.test, "0번"),
+        Data(R.drawable.test, "1번"),
+        Data(R.drawable.test, "2번"),
+        Data(R.drawable.test, "3번")
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        listView.adapter = CustomAdapter(this, DataList)
 
-        val item = arrayOf("0번","1번","2번","3번","4번","5번","6번","7번","8번","9번","10번","11번","12번")
-        listView.adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,item)
 
-        listView.onItemClickListener = AdapterView.OnItemClickListener{
-            parent, view, position, id ->
-            val selectItem = parent.getItemAtPosition(position)
-            Toast.makeText(this, selectItem.toString(), Toast.LENGTH_SHORT).show()
+
+        listView.onItemClickListener = AdapterView.OnItemClickListener{parent, view, position, id ->
+            val selectItem = parent.getItemAtPosition(position) as Data
+            Toast.makeText(this, selectItem.name, Toast.LENGTH_SHORT).show()
         }
+
+
     }
 }
