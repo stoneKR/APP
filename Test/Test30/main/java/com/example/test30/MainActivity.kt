@@ -1,10 +1,14 @@
 package com.example.test30
 
+import android.content.Intent
+import android.graphics.Matrix
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -15,18 +19,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        et.addTextChangedListener(object : TextWatcher{
-            override fun afterTextChanged(p0: Editable?) {
-                println("입력끝" + p0)
-            }
+        Click(btn_1)
+    }
 
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                println("입력전 " + p0)
-            }
+    fun Click(v : View){
+        iv_1.visibility = View.INVISIBLE
+        iv_2.visibility = View.INVISIBLE
+        iv_3.visibility = View.INVISIBLE
 
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                println("입력중" + p0)
-            }
-        })
+        when(v){
+            btn_1 -> iv_1.visibility = View.VISIBLE
+            btn_2 -> iv_2.visibility = View.VISIBLE
+            btn_3 -> iv_3.visibility = View.VISIBLE
+        }
     }
 }
