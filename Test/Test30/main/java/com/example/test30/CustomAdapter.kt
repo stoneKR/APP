@@ -1,33 +1,32 @@
 package com.example.test30
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.ImageView
-import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.custom_list.view.*
 
 
-class Data(val profile:Int, val name:String)
+class Data(val profile: Int, val name: String)
 
-class CustomAdapter (val context: Context, val DataList:ArrayList<Data>) : BaseAdapter()
-{
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val view:View = LayoutInflater.from(context).inflate(R.layout.custom_list,null)
-        val profile = view.findViewById<ImageView>(R.id.iv_custom)
-        val name = view.findViewById<TextView>(R.id.tv_custom)
-        val data = DataList[position]
+class CustomViewHolder(v : View) : RecyclerView.ViewHolder(v) {
+    val profile = v.iv_custom
+    val name = v.tv_custom
+}
 
-        profile.setImageResource(data.profile)
-        name.text = data.name
-        return view
+class CustomAdapter(val DataList:ArrayList<Data>) : RecyclerView.Adapter<CustomViewHolder>(){
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
+        val cellForRow = LayoutInflater.from(parent.context).inflate(R.layout.custom_list, parent, false)
+        return CustomViewHolder(cellForRow)
     }
+    // 생성하는 부분
 
-    override fun getItem(position: Int) = DataList[position]
+    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
+        holder.profile.setImageResource(DataList[position].profile)
+        holder.name.text = DataList[position].name
+    }
+    // 수정하는 부분
 
-    override fun getItemId(position: Int) = 0L
-
-    override fun getCount() = DataList.size
-
+    override fun getItemCount() = DataList.size
 }
