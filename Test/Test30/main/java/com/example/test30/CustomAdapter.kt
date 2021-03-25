@@ -42,11 +42,12 @@ class CustomAdapter(val context: Context) : RecyclerView.Adapter<CustomViewHolde
     // 생성하는 부분
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
+        val curData = DataList[position]
         holder.profile.setImageResource(DataList[position].profile)
         holder.name.text = DataList[position].name
 
         holder.itemView.setOnClickListener {
-            Toast.makeText(context, DataList[position].name, Toast.LENGTH_SHORT).show()
+            (context as MainActivity).RecyclerClick(curData)
         }
     }
     // 수정하는 부분

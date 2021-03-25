@@ -24,4 +24,8 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    fun RecyclerClick(curData: Data){
+        Toast.makeText(this, curData.name, Toast.LENGTH_SHORT).show()
+    }
 }
