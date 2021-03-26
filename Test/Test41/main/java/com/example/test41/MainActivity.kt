@@ -1,5 +1,6 @@
 package com.example.test41
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -22,34 +23,38 @@ class MainActivity : AppCompatActivity() {
 
         viewPager.adapter = pagerAdapter()
 
-        viewPager.addOnPageChangeListener(object : ViewPager.SimpleOnPageChangeListener() {
-            override fun onPageScrollStateChanged(position: Int) {
-                when(position){
-                    0 -> bottomNavigationView2.selectedItemId = R.id.home
-                    1 -> bottomNavigationView2.selectedItemId = R.id.favorite
-                    2 -> bottomNavigationView2.selectedItemId = R.id.profile
-
+        viewPager.addOnPageChangeListener(object : ViewPager.SimpleOnPageChangeListener(){
+            override fun onPageSelected(position: Int) {
+                when(position) {
+                    0 -> bottomNavigationView.selectedItemId = R.id.home
+                    1 -> bottomNavigationView.selectedItemId = R.id.favorite
+                    2 -> bottomNavigationView.selectedItemId = R.id.profile
                 }
-
             }
-
         })
 
-        // MainActivity 안에 클래스를 넣을 것이기 때문에 inner 클래스 사용
-        inner class pagerAdapter : PagerAdapter() {
-            override fun isViewFromObject(view: View, `object`: Any) = view == `object`
-
-            override fun getCount() = viewList.size
-
-            override fun instantiateItem(container: ViewGroup, position: Int): Any {
-                var curView = viewList[position]
-                viewPager.addView(curView)
-                return curView
+        bottomNavigationView.setOnNavigationItemReselectedListener {
+            when( it.itemId){
+                R.id.home -> viewPager.setCurrentItem(0)
+                R.id.favorite -> viewPager.setCurrentItem(1)
+                R.id.profile -> viewPager.setCurrentItem(2)
             }
+        }
 
-            override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-                viewPager.removeView(`object` as View)
-            }
+    }
+    inner class pagerAdapter : PagerAdapter() {
+        override fun isViewFromObject(view: View, `object`: Any) = view == `object`
+
+        override fun getCount() = viewList.size
+
+        override fun instantiateItem(container: ViewGroup, position: Int): Any {
+            var curView = viewList[position]
+            viewPager.addView(curView)
+            return curView
+        }
+
+        override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
+            viewPager.removeView(`object` as View)
         }
     }
 }
