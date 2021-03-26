@@ -24,6 +24,9 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = pagerAdapter()
 
         tabLayout.setupWithViewPager(viewPager)
+        tabLayout.getTabAt(0)?.setText("Home")
+        tabLayout.getTabAt(1)?.setText("Favorite")
+        tabLayout.getTabAt(2)?.setText("Profile")
     }
 
 
