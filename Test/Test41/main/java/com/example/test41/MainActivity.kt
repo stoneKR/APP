@@ -23,27 +23,11 @@ class MainActivity : AppCompatActivity() {
 
         viewPager.adapter = pagerAdapter()
 
-        viewPager.addOnPageChangeListener(object : ViewPager.SimpleOnPageChangeListener(){
-            override fun onPageSelected(position: Int) {
-                when(position) {
-                    0 -> bottomNavigationView.selectedItemId = R.id.home
-                    1 -> bottomNavigationView.selectedItemId = R.id.favorite
-                    2 -> bottomNavigationView.selectedItemId = R.id.profile
-                }
-            }
-        })
-
-        bottomNavigationView.setOnNavigationItemSelectedListener {
-            when(it.itemId){
-                R.id.home -> viewPager.setCurrentItem(0)
-                R.id.favorite -> viewPager.setCurrentItem(1)
-                R.id.profile -> viewPager.setCurrentItem(2)
-
-            }
-            return@setOnNavigationItemSelectedListener true
-        }
-
+        tabLayout.setupWithViewPager(viewPager)
     }
+
+
+
     inner class pagerAdapter : PagerAdapter() {
         override fun isViewFromObject(view: View, `object`: Any) = view == `object`
 
