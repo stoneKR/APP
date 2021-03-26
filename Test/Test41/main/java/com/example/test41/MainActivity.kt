@@ -33,12 +33,14 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        bottomNavigationView.setOnNavigationItemReselectedListener {
-            when( it.itemId){
+        bottomNavigationView.setOnNavigationItemSelectedListener {
+            when(it.itemId){
                 R.id.home -> viewPager.setCurrentItem(0)
                 R.id.favorite -> viewPager.setCurrentItem(1)
                 R.id.profile -> viewPager.setCurrentItem(2)
+
             }
+            return@setOnNavigationItemSelectedListener true
         }
 
     }
