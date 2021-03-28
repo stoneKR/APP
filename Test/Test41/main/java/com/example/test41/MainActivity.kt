@@ -14,6 +14,5 @@ class MainActivity : AppCompatActivity() {
         switch1.setOnCheckedChangeListener{compoundButton, b ->
             println(b)
         }
-
     }
 }
