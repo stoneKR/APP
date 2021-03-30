@@ -1,8 +1,10 @@
 package com.example.gift;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -23,10 +25,19 @@ public class HomeActivity extends AppCompatActivity {
                 Log.d("태그", "값");
             }
         });
+
+        findViewById(R.id.Bible).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, MainActivity.class));
+            }
+        });
     }
 
     public void HomeClick(View v){
-        Toast.makeText(this, "ㅋㅋ", Toast.LENGTH_SHORT).show();
+        Toast toast = Toast.makeText(this, "ㅋㅋ", Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.END | Gravity.BOTTOM, 10, 10);
+        toast.show();
     }
 
 
