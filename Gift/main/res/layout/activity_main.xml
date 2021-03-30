@@ -12,11 +12,12 @@
         android:id="@+id/Home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="323dp"
-        android:text="화면전환"
+        android:text="Home"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="HomeClick"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

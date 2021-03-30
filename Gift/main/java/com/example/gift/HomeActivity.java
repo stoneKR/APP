@@ -18,11 +18,22 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home); // 안녕하세요
 
-        Button Board = findViewById(R.id.Board);
-        Board.setOnClickListener(new View.OnClickListener() {
+
+        findViewById(R.id.Home).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
-                Log.d("태그", "값");
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, HomeActivity.class);
+                intent.putExtra("키", "위");
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.Board).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+                intent.putExtra("키", "위");
+                startActivity(intent);
             }
         });
 
@@ -34,13 +45,6 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
-
-    public void HomeClick(View v){
-        Toast toast = Toast.makeText(this, "ㅋㅋ", Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.END | Gravity.BOTTOM, 10, 10);
-        toast.show();
-    }
-
-
 }
