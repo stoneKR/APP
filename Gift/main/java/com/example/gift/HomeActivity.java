@@ -29,7 +29,9 @@ public class HomeActivity extends AppCompatActivity {
         findViewById(R.id.Bible).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this, MainActivity.class));
+                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+                intent.putExtra("키", "위");
+                startActivity(intent);
             }
         });
     }
