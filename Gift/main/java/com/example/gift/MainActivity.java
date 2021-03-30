@@ -2,24 +2,33 @@ package com.example.gift;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle sevedInstanceState) {
-        super.onCreate(sevedInstanceState);
-        setContentView(R.layout.activity_main); //안녕하세요
 
-        findViewById(R.id.Home).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                intent.putExtra("키", "위");
-                startActivity(intent);
-            }
-        });
-    }
-}
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+
+            startLoading();
+        }// onCreate()..
+
+        private void startLoading() {
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+
+                    Intent intent= new Intent(getApplicationContext(), HomeActivity.class);
+                    startActivity(intent);  //Loagin화면을 띄운다.
+                    finish();   //현재 액티비티 종료
+                }
+            }, 2000); // 화면에 Logo 2초간 보이기
+        }// startLoading Method..
+    }// MainActivity Class..
+
