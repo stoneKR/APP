@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="버튼1"
+        android:layout_weight="1"
+        android:onClick="Btn1Click"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼2"
+        android:layout_weight="1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼3"
+        android:layout_weight="1" />
+
+</LinearLayout>
+    <!--
+android:onClick="Btn1Click" 버튼을 클릭 했을 때 이벤트를 주기 위해서
+온클릭 네임 지정 SubActivity에서 이벤트 설정 Toast
+클릭 했을 때 Toast가 발동하도록 설정했음
+     -->
